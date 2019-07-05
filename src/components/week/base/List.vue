@@ -1,7 +1,7 @@
 <template>
   <div class="list" ref="wrapper">
     <ul>
-      <li v-for="(item,index) in weekInfo" :key="index">
+      <li v-for="(item, index) in weekInfo" :key="index">
         <img :src="item.imgUrl" alt="" />
         <div class="list-info">
           <h3>{{ item.title }}</h3>
