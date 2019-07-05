@@ -47,12 +47,10 @@ export default {
     };
   },
   activated() {
-    console.log("拉取第" + this.$route.params.id + "页数据");
     this.getData();
   },
   methods: {
     async getData() {
-      let heaven = await getDetails(this.$route.params.id);
       let {
         sightName,
         bannerImg,
@@ -69,13 +67,13 @@ export default {
       this.recommendInfo = recommendInfo;
       this.calendarInfo = calendarInfo;
       this.commentInfo = commentInfo;
-      console.log(heaven);
     }
   }
 };
 </script>
 
-<style lang="stylus" scoped>
-.detail
-    height:2000px
+<style lang="scss" scoped>
+.detail {
+  height: 2000px;
+}
 </style>

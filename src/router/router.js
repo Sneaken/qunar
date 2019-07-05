@@ -18,6 +18,16 @@ export default new Router({
       component: () => import("components/city/City")
     },
     {
+      path: "/detail/:id",
+      name: "detail",
+      component: () => import("components/detail/Detail")
+    },
+    {
+      path: "/week/:id",
+      name: "week",
+      component: () => import("components/week/Week")
+    },
+    {
       path: "/PC",
       name: "PC",
       component: () => import("../PC.vue")

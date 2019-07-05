@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <div id="nav"></div>
-    <router-view />
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
@@ -9,9 +10,7 @@
 export default {
   name: "App",
   mounted() {
-    if (this._isMobile()) {
-      this.$router.replace("/");
-    } else {
+    if (!this._isMobile()) {
       this.$router.replace("/PC");
     }
   },

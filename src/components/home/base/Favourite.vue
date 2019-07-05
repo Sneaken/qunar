@@ -8,8 +8,9 @@
       /><span>猜你喜欢</span>
     </div>
     <ul>
-      <!--      <router-link :to="">-->
-      <li
+      <router-link
+        :to="{ name: 'detail', params: { id: item.id } }"
+        tag="li"
         class="fav-item border-bottom"
         v-for="item in recommendList"
         :key="item.id"
@@ -37,8 +38,7 @@
             <span class="fav_info_address">{{ item.title }}</span>
           </div>
         </div>
-      </li>
-      <!--      </router-link>-->
+      </router-link>
     </ul>
   </div>
 </template>

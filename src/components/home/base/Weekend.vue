@@ -4,8 +4,12 @@
       <span>周末去哪儿</span>
     </div>
     <ul style="background-color: #f5f5f5;">
-      <!--    <router-link>-->
-      <li v-for="item in weekendList" :key="item.id">
+      <router-link
+        :to="{ name: 'week', params: { id: item.id } }"
+        tag="li"
+        v-for="item in weekendList"
+        :key="item.id"
+      >
         <div class="container">
           <img :src="item.imgUrl" alt="" />
           <div>
@@ -13,8 +17,7 @@
             <p class="item_desc">{{ item.desc }}</p>
           </div>
         </div>
-      </li>
-      <!--    </router-link>-->
+      </router-link>
     </ul>
   </div>
 </template>
